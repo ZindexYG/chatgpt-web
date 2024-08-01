@@ -3,6 +3,10 @@ import { useMessage } from 'naive-ui'
 import { t } from '@/locales'
 import { useChatStore } from '@/store'
 
+/**
+ * 主题会话功能
+ * @returns {any}
+ */
 export function useUsingContext() {
   const ms = useMessage()
   const chatStore = useChatStore()

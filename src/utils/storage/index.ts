@@ -1,8 +1,13 @@
 interface StorageData<T = any> {
-  data: T
-  expire: number | null
+  data: T	 											// 数据集
+  expire: number | null 				// 过期时间
 }
 
+/**
+ * 本地缓存
+ * @param {any} options?:{expire?:number|null}
+ * @returns {any}
+ */
 export function createLocalStorage(options?: { expire?: number | null }) {
   const DEFAULT_CACHE_TIME = 60 * 60 * 24 * 7
 
@@ -52,6 +57,15 @@ export function createLocalStorage(options?: { expire?: number | null }) {
   return { set, get, remove, clear }
 }
 
+/**
+ * 没有过期的本地缓存
+ * @returns {any}
+ */
 export const ls = createLocalStorage()
 
+/**
+ * 有过期时间的本地缓存
+ * @param {any} {expire:null}
+ * @returns {any}
+ */
 export const ss = createLocalStorage({ expire: null })

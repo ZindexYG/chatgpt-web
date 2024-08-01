@@ -4,6 +4,7 @@ import { router } from '@/router'
 import { t } from '@/locales'
 
 export const useChatStore = defineStore('chat-store', {
+  // 所有会话信息，都存储在 localStorage
   state: (): Chat.ChatState => getLocalState(),
 
   getters: {

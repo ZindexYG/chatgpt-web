@@ -1,5 +1,9 @@
 {
-  "root": true,
-  "ignorePatterns": ["build"],
-  "extends": ["@antfu"]
+  // "root": true,
+  // "ignorePatterns": [
+  //   "build"
+  // ],
+  // "extends": [
+  //   "@antfu"
+  // ]
 }
